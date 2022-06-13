@@ -2,7 +2,7 @@ node {
     def mvnHome = tool name: 'Maven home', type: 'maven'
     stage('SCM-Checkout') { 
         git branch: 'main', credentialsId: 'git-hub-credentials', 
-		url: 'https://github.com/vikas99341/tomcat-demo.git' 
+		url: 'https://github.com/cmisenga/tomcat-demo.git' 
     }
     stage('Maven clean-compile') { 
         sh '${mvnHome}/bin/mvn clean compile'
